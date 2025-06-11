@@ -5,7 +5,7 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Cadastro de Necessidade</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='style\cadastro.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='style/cadastro.css'>
 </head>
 <body>
     <header>
@@ -25,7 +25,9 @@
             <div>
                 <label>Nome da instituição:</label>
                 <input type="text" name="instituicao" required>
+            </div>
             
+            <div>
                 <label>Tipo de ajuda:</label>
                 <select name="tipoAjuda">
                     <option value="">Selecione</option>
@@ -46,12 +48,44 @@
                 <label>Descrição detalhada:</label>
                 <textarea name="descricao" required></textarea>
             </div>
+            <div>
+                <label id="cep">CEP</label>
+                <input type="text" id="cepText" class="form-control" required>
+            </div>
+            <div>
+                <label id="rua">Rua</label>
+                <input type="text" id="ruaText" class="form-control">
+            </div>
+            <div>
+                <label id="numero">Numero</label>
+                <input type="text" id="numeroText" class="form-control">
+            </div>
+            <div>
+                <label id="bairro">Bairro</label>
+                <input type="text" id="bairroText" class="form-control">
+            </div>
+            <div>
+                <label id="cidade">Cidade</label>
+                <input type="text" id="cidadeText" class="form-control">
+            </div>
+            <div>
+                <label id="estado">Estado</label>
+                <input type="text" id="estadoText" class="form-control">
+            </div>
             
+            <div>
+                <label>Contato (E-mail ou Telefone):</label>
+                <input type="text" name="contato" required>
+            </div>
+
+            <div>
+                <button type="submit">Cadastrar Necessidade</button>
+            </div>
         </form>
     </main>
     <footer>
-        <p>&copy ONG. Todos os direitos reservados</p>
+        <p>&copy 2025 - Plataforma Conexão Voluntaria</p>
     </footer>
-    <script src='script\cadastro.js'></script>
+    <script src='script/cadastro.js'></script>
 </body>
 </html>
