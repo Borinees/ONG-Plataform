@@ -20,3 +20,9 @@ const preencherFormulario = (endereco) => {
     document.getElementById('cidadeText').value = endereco.localidade;
     document.getElementById('estadoText').value = endereco.estado;
 }
+
+//Verifica se o CEP é valido com teste de regx
+const eNumero = (cepText) => /^[0-9]+$/.test(cepText);
+
+//Confere se o CEP tem o tamanho correto
+const cepValido = (cepText) => cepText.lenght == 8 && eNumero(cepText);
