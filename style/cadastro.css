@@ -84,3 +84,29 @@ textarea{
     flex: 0.25;
     margin-top: 0.1rem; /*sem fica torto (pq? não sei)*/
 }
+
+/*botão*/
+button{
+    padding: 0.8rem 1.5rem;
+    background-color: #4b79a1;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+button:hover{
+    background-color: #36587a
+}
+
+/*rodapé*/
+footer{
+    margin-top: 2rem;
+    padding: 1rem;
+    text-align: center;
+    background-color: rgba(75, 121, 161, 0.8);
+    font-size: 0.9rem;
+    color: #aaaaaa;
+}
