@@ -1,6 +1,7 @@
 # Plataforma Conexão Voluntaria
 
 Projeto desenvolvido com o objetivo de facilitar o cadastro e visualização de necessidades de instituições que precisam de ajuda voluntaria.
+<br>
 É uma forma simples e acessivel de conectar pessoas dispostas a ajudar.
 
 ## Objetivo
@@ -51,4 +52,5 @@ Criar uma plataforma web onde instituições possam cadastrar suas necessidades 
 ## Créditos
 
 Projeto desenvolvido por **Mia**
+<br>
 Realizado para estudos e se possivel auxiliar outras pessoas.
