@@ -58,7 +58,7 @@ form.addEventListener('submit', (event) => {
     event.preventDefault();
 
     //Pega os dados do formulario
-    const dadosFormulario = {
+    const novaNecessidade = {
         instituicao: form.instituicao.value,
         tipoAjuda: form.tipoAjuda.value,
         titulo: form.titulo.value,
@@ -72,8 +72,14 @@ form.addEventListener('submit', (event) => {
         contato: document.getElementById('contatoText').value
     };
 
+    //Cria lista
+    const listaNecessidade = JSON.parse(localStorage.getItem('listaNecessidade')) || [];
+
+    //Adiciona a nova necessidade
+    listaNecessidade.push(novaNecessidade);
+
     //Salva os dados
-    localStorage.setItem('dadosNecessidade', JSON.stringify(dadosFormulario));
+    localStorage.setItem('listaNecessidade', JSON.stringify(listaNecessidade));
 
     //Redireciona
     window.location.href = 'visualizacao.html';
