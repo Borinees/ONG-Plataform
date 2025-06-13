@@ -29,6 +29,7 @@ Criar uma plataforma web onde instituições possam cadastrar suas necessidades 
 - `API ViaCEP` - busca do endereço pelo CEP
 
 ## Estrutura Diretórios
+```bash
 ├── index.html # Página inicial
 ├── cadastro.html # Página de cadastro
 ├── visualizacao.html # Página para ver as necessidades
@@ -38,6 +39,7 @@ Criar uma plataforma web onde instituições possam cadastrar suas necessidades 
 │ ├── cadastro.js # Script do formulário
 │ └── visualizacao.js # Script da listagem e pesquisa
 └── README.md # Este arquivo
+```
 
 ## Como usar
 
