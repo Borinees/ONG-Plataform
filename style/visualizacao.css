@@ -31,6 +31,32 @@ nav a{
     font-weight: bold;
 }
 
+/*pesquisa*/
+.pesquisa-container{
+    max-width: 700px;
+    margin: 2rem auto 1rem;
+    padding: 0 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+#pesquisar{
+    width: 100%;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    outline: none;
+    transition: border-color 0.3s ease;
+    background-color: #fefefe;
+    color: #333;
+}
+
+#pesquisar:focus{
+    border-color: #4b79a1;
+    box-shadow: 0 0 5px rgba(75,121,161,0.5);
+}
+
 /*cartão*/
 .card{
     background-color: #4b79a1;
