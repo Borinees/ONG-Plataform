@@ -29,20 +29,21 @@ const cepValido = (cepText) => cepText.length == 8 && eNumero(cepText);
 
 //Consumo de API viaCEP
 const pesquisarCep = async() => {
-    limparFormulario();
-    const cepInput = document.getElementById('cepText');
-    const url = `https://viacep.com.br/ws/${cepInput.value}/json/`;
-
-    if(cepValido(cepInput.value)) {
+    const cep = document.getElementById('cepText').value
+    const cepLimpo = cep.replace(/\D/g, '');
+    
+    if(cepValido(cepLimpo)) {
+        const url = `https://viacep.com.br/ws/${cepLimpo}/json/`;
         const dados = await fetch(url);
         const adress = await dados.json();
-
+        
         if(adress.hasOwnProperty('erro')) {
             alert('CEP não encontrado');
         } else {
             preencherFormulario(adress);
         }
-    } else {
+    } else if (cep !== ''){
+        limparFormulario();
         alert('CEP incorreto');
     }
 }
