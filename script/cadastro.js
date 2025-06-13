@@ -49,3 +49,32 @@ const pesquisarCep = async() => {
 }
 
 document.getElementById('cepText').addEventListener('focusout',pesquisarCep);
+
+//Local storage
+
+const form = document.getElementById('formNecessidade');
+
+form.addEventListener('submit', (event) => {
+    event.preventDefault();
+
+    //Pega os dados do formulario
+    const dadosFormulario = {
+        instituicao: form.instituicao.value,
+        tipoAjuda: form.tipoAjuda.value,
+        titulo: form.titulo.value,
+        descricao: form.descricao.value,
+        cep: document.getElementById('cepText').value,
+        rua: document.getElementById('ruaText').value,
+        numero: document.getElementById('numeroText').value,
+        bairro: document.getElementById('bairroText').value,
+        cidade: document.getElementById('cidadeText').value,
+        estado: document.getElementById('estadoText').value,
+        contato: document.getElementById('contatoText').value
+    };
+
+    //Salva os dados
+    localStorage.setItem('dadosNecessidade', JSON.stringify(dadosFormulario));
+
+    //Redireciona
+    window.location.href = 'visualizacao.html';
+});
