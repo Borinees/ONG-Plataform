@@ -10,6 +10,9 @@ const listaNecessidade = JSON.parse(dadosSalvos) || [];
 //Função para renderizar
 function renderizarLista(lista){
 
+    //Limpa o conteudo
+    detalhes.innerHTML = '';    
+
     if(lista.length > 0) {
         lista.forEach((dados) => {
             const div = document.createElement('div');
