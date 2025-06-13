@@ -5,11 +5,14 @@
     box-sizing: border-box;
 }
 
-body{
+html, body{
     font-family:Arial, Helvetica, sans-serif;
     background-color: #333;
     color: #fefefe;
     line-height: 2;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 /*cabeçario*/
@@ -31,6 +34,37 @@ nav a{
     font-weight: bold;
 }
 
+main{
+    padding: 2rem;
+    flex: 1;
+}
+
+main blockquote{
+    font-style: italic;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+main li{
+    margin-left: 2rem;
+}
+
+.botao{
+    margin-top: 2rem;
+    display: inline-block;
+    padding: 0.6rem 1.2rem;
+    background-color: #4b79a1;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.botao:hover{
+    background-color: #355c7d;
+}
+
 /*rodapé*/
 footer{
     margin-top: 2rem;
@@ -39,4 +73,5 @@ footer{
     background-color: rgba(75, 121, 161, 0.8);
     font-size: 0.9rem;
     color: #aaaaaa;
+
 }
