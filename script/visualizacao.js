@@ -8,12 +8,12 @@ if(dadosSalvos) {
 
     detalhes.innerHTML = `
         <p><strong>Instituição:</strong> ${dados.instituicao}</p>
-        <p><strong>Tpo de ajuda:</strong> ${dados.tipoAjuda}</p>
-        <p><strong>Titulo:</strong> ${dados.titulo}</p>
+        <p><strong>Tipo de ajuda:</strong> ${dados.tipoAjuda}</p>
+        <p><strong>Título:</strong> ${dados.titulo}</p>
         <p><strong>Descrição:</strong> ${dados.descricao}</p>
-        <p><strong>Cep:</strong> ${dados.cep}</p>
+        <p><strong>CEP:</strong> ${dados.cep}</p>
         <p><strong>Rua:</strong> ${dados.rua}</p>
-        <p><strong>Numero:</strong> ${dados.numero}</p>
+        <p><strong>Número:</strong> ${dados.numero}</p>
         <p><strong>Bairro:</strong> ${dados.bairro}</p>
         <p><strong>Cidade:</strong> ${dados.cidade}</p>
         <p><strong>Estado:</strong> ${dados.estado}</p>
