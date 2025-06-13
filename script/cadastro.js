@@ -50,12 +50,32 @@ const pesquisarCep = async() => {
 
 document.getElementById('cepText').addEventListener('focusout',pesquisarCep);
 
-//Local storage
+//Salvar
 
 const form = document.getElementById('formNecessidade');
 
 form.addEventListener('submit', (event) => {
     event.preventDefault();
+
+    const contato = form.contato.value.trim();
+
+    //Função para validar email
+    const validarEmail = (email) => {
+        const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return regexEmail.test(email);
+    };
+
+    //Função para validar telefone (10 a 15 digitos apenas num)
+    const validarTelefone = (telefone) => {
+        const regexTelefone = /^\d{10,15}$/;
+        return regexTelefone.test(telefone);
+    };
+
+    //Verifica se é valido
+    if (!validarEmail(contato) && !validarTelefone(contato)) {
+        alert('Por favor insira um número de telefone ou email válido')
+        return;
+    }
 
     //Pega os dados do formulario
     const novaNecessidade = {
@@ -78,7 +98,7 @@ form.addEventListener('submit', (event) => {
     //Adiciona a nova necessidade
     listaNecessidade.push(novaNecessidade);
 
-    //Salva os dados
+    //Salva os dados no localstorage
     localStorage.setItem('listaNecessidade', JSON.stringify(listaNecessidade));
 
     //Redireciona
